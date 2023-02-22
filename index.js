@@ -7,7 +7,7 @@ const appId = Math.random().toString()
 app.get('/', (req, res) => {
   res.send({
     appId,
-    msg: "hello world 7"
+    msg: "hello world 8"
   })
 })
 

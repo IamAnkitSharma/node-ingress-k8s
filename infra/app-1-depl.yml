@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-app-depl
+  name: node-app-1-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: node-app
+      app: node-app-1
   template:
     metadata:
       labels:
-        app: node-app
+        app: node-app-1
     spec:
       containers:
-        - name: node-app
-          image: k8s-node-app/1.0.0
+        - name: node-app-1
+          image: k8s-node-app-1/1.0.0
           imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: node-app-clusterip-srv
+  name: node-app-1-clusterip-srv
 spec:
   selector:
-    app: node-app
+    app: node-app-1
   ports:
-    - name: node-app
+    - name: node-app-1
       protocol: TCP
-      port: 3000
-      targetPort: 3000
+      port: 4001
+      targetPort: 4001
 

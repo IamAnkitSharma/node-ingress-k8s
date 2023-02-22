@@ -9,10 +9,17 @@ spec:
     - host: k8s.dev
       http:
         paths:
-          - path: /
+          - path: /app1
             pathType: Prefix
             backend:
               service:
-                name: node-app-clusterip-srv
+                name: node-app-1-clusterip-srv
                 port:
-                  number: 3000
+                  number: 4001
+          - path: /app2
+            pathType: Prefix
+            backend:
+              service:
+                name: node-app-2-clusterip-srv
+                port:
+                  number: 4002
