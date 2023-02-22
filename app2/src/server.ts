@@ -5,10 +5,11 @@ const PORT = process.env.PUBLIC_PORT || 4002;
 // Initialize application
 const app = express();
 
-app.get('/app2', (req: Request, res: Response) => {
-    res.send('Hello World from app 2');
-});
+const id = Math.random();
 
+app.get('/app2', (req: Request, res: Response) => {
+    res.send('Hello World from app 2, deployment id - '+ id);
+})
 // Start server 
 app.listen(PORT, () => {
     console.log(`App2 Server started on port ${PORT}`);
