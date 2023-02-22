@@ -1,0 +1,1 @@
+docker rm k8s-node-app -f
