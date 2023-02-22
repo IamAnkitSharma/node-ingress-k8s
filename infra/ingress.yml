@@ -13,6 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: posts-clusterip-srv
+                name: node-app-clusterip-srv
                 port:
                   number: 3000
