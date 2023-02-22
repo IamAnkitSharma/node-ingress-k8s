@@ -1,1 +1,0 @@
-docker build . -t k8s-node-app/1.0.0

@@ -1,4 +1,5 @@
 #https://kubernetes.github.io/ingress-nginx/deploy/#quick-start
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.6.4/deploy/static/provider/cloud/deploy.yaml
 
+#if you have new app with new docker image build the image for the firsttime
 #for skaffold -> brew install skaffold && skaffold dev
